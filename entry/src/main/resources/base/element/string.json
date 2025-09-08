@@ -1,0 +1,383 @@
+{
+  "string": [
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "Correct_Email",
+      "value": "test1234@test.com"
+    },
+    {
+      "name": "Correct_Password",
+      "value": "123456"
+    },
+    {
+      "name": "Password_Hint",
+      "value": "Password"
+    },
+    {
+      "name": "Confirm_Password_Hint",
+      "value": "Confirm Password"
+    },
+    {
+      "name": "Email_Hint",
+      "value": "E-mail"
+    },
+    {
+      "name": "Username_Hint",
+      "value": "Username"
+    },
+    {
+      "name": "Forgot_Password",
+      "value": "Forgot Password?"
+    },
+    {
+      "name": "Login",
+      "value": "Login"
+    },
+    {
+      "name": "Register",
+      "value": "Register"
+    },
+    {
+      "name": "No_Account_Text",
+      "value": "Don't have an account?"
+    },
+    {
+      "name": "Already_Have_Account",
+      "value": "Already have an account?"
+    },
+    {
+      "name": "Sign_Up_Text",
+      "value": "Sign Up"
+    },
+    {
+      "name": "Followers_Text",
+      "value": "Followers"
+    },
+    {
+      "name": "Posts_Text",
+      "value": "Posts"
+    },
+    {
+      "name": "Following_Text",
+      "value": "Following"
+    },
+    {
+      "name": "Edit_Profile_Text",
+      "value": "Edit Profile"
+    },
+    {
+      "name": "Share_Profile_Text",
+      "value": "Share Profile"
+    },
+    {
+      "name": "Highlights_Text",
+      "value": "Highlights"
+    },
+    {
+      "name": "New_Text",
+      "value": "New"
+    },
+    {
+      "name": "Search_Text",
+      "value": "Search"
+    },
+    {
+      "name": "For_You_Text",
+      "value": "For You"
+    },
+    {
+      "name": "Not_Personalized_Text",
+      "value": "Not Personalized"
+    },
+    {
+      "name": "Follow",
+      "value": "Follow"
+    },
+    {
+      "name": "Follow_Request",
+      "value": "Follow Request"
+    },
+    {
+      "name": "Today",
+      "value": "Today"
+    },
+    {
+      "name": "This_Week",
+      "value": "This Week"
+    },
+    {
+      "name": "Older",
+      "value": "Older"
+    },
+    {
+      "name": "Explore_Text",
+      "value": "Explore"
+    },
+    {
+      "name": "Settings_Text",
+      "value": "Settings and activity"
+    },
+    {
+      "name": "Accounts_Centre_Text",
+      "value": "Accounts Centre"
+    },
+    {
+      "name": "Accounts_Centre_Sub_Text",
+      "value": "Password, security, personal details, ad preferences"
+    },
+    {
+      "name": "Accounts_Centre_Sub_Sub_Text",
+      "value": "Manage your connected experiences and account settings across Meta technologies"
+    },
+    {
+      "name": "Saved_Text",
+      "value": "Saved"
+    },
+    {
+      "name": "Archive_Text",
+      "value": "Archive"
+    },
+    {
+      "name": "Your_Activity_Text",
+      "value": "Your activity"
+    },
+    {
+      "name": "Notifications_Text",
+      "value": "Notifications"
+    },
+    {
+      "name": "Time_Management_Text",
+      "value": "Time management"
+    },
+    {
+      "name": "Account_Privacy_Text",
+      "value": "Account privacy"
+    },
+    {
+      "name": "Close_Friends_Text",
+      "value": "Close friends"
+    },
+    {
+      "name": "Crossposting_Text",
+      "value": "Crossposting"
+    },
+    {
+      "name": "Blocked_Text",
+      "value": "Blocked"
+    },
+    {
+      "name": "Hide_Story_Live_Text",
+      "value": "Hide story and live"
+    },
+    {
+      "name": "Messages_Story_Replies_Text",
+      "value": "Messages and story replies"
+    },
+    {
+      "name": "Tags_Mentions_Text",
+      "value": "Tags and mentions"
+    },
+    {
+      "name": "Comments_Text",
+      "value": "Comments"
+    },
+    {
+      "name": "Sharing_Reuse_Text",
+      "value": "Sharing and reuse"
+    },
+    {
+      "name": "Restricted_Text",
+      "value": "Restricted"
+    },
+    {
+      "name": "Limit_Interactions_Text",
+      "value": "Limit Interactions"
+    },
+    {
+      "name": "Hidden_Words_Text",
+      "value": "Hidden words"
+    },
+    {
+      "name": "Follow_Invite_Friends_Text",
+      "value": "Follow and invite friends"
+    },
+    {
+      "name": "Favourites_Text",
+      "value": "Favourites"
+    },
+    {
+      "name": "Muted_Text",
+      "value": "Muted"
+    },
+    {
+      "name": "Suggested_Content_Text",
+      "value": "Suggested content"
+    },
+    {
+      "name": "Like_Share_Counts_Text",
+      "value": "Like and share counts"
+    },
+    {
+      "name": "Device_Permissions_Text",
+      "value": "Device permissions"
+    },
+    {
+      "name": "Archiving_Downloading_Text",
+      "value": "Archiving and downloading"
+    },
+    {
+      "name": "Accesibility_Translations_Text",
+      "value": "Accesibilitiy and translations"
+    },
+    {
+      "name": "Language_Text",
+      "value": "Language"
+    },
+    {
+      "name": "Data_Usage_Text",
+      "value": "Data usage and media quality"
+    },
+    {
+      "name": "App_Website_Permissions_Text",
+      "value": "App website permissions"
+    },
+    {
+      "name": "Family_Centre_Text",
+      "value": "Family Centre"
+    },
+    {
+      "name": "Account_Type_Text",
+      "value": "Account type and tools"
+    },
+    {
+      "name": "Orders_Payments_Text",
+      "value": "Orders and payments"
+    },
+    {
+      "name": "Help_Text",
+      "value": "Help"
+    },
+    {
+      "name": "Privacy_Centre_Text",
+      "value": "Privacy Centre"
+    },
+    {
+      "name": "Account_Status_Text",
+      "value": "Account Status"
+    },
+    {
+      "name": "About_Text",
+      "value": "About"
+    },
+    {
+      "name": "WhatsApp_Text",
+      "value": "WhatsApp"
+    },
+    {
+      "name": "Threads_Text",
+      "value": "Threads"
+    },
+    {
+      "name": "Facebook_Text",
+      "value": "Facebook"
+    },
+    {
+      "name": "Add_Account_Text",
+      "value": "Add account"
+    },
+    {
+      "name": "Logout_Text",
+      "value": "Log out"
+    },
+    {
+      "name": "Logout_All_Text",
+      "value": "Log out of all accounts"
+    },
+    {
+      "name": "Cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "Recent",
+      "value": "Recent"
+    },
+    {
+      "name": "Videos",
+      "value": "Videos"
+    },
+    {
+      "name": "Next",
+      "value": "Next"
+    },
+    {
+      "name": "Favorites",
+      "value": "Favorites"
+    },
+    {
+      "name": "Likes",
+      "value": " likes"
+    },
+    {
+      "name": "Reply",
+      "value": "Reply"
+    },
+    {
+      "name": "SeeTranslation",
+      "value": "See translation"
+    },
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "tab_homepage",
+      "value": "home"
+    },
+    {
+      "name": "tab_category",
+      "value": "Categories"
+    },
+    {
+      "name": "tab_cart",
+      "value": "Cart"
+    },
+    {
+      "name": "tab_profile",
+      "value": "You"
+    },
+    {
+      "name": "bottom_nav",
+      "value": "Bottom Menu"
+    },
+    {
+      "name": "tv_promot_title_one",
+      "value": "Order guarantee"
+    },
+    {
+      "name": "tv_promot_desc_one",
+      "value": "Refund for any issue"
+    },
+    {
+      "name": "tv_promot_title_two",
+      "value": "Free shipping"
+    },
+    {
+      "name": "tv_promot_desc_two",
+      "value": "Limited-time offer"
+    },
+    {
+      "name": "reason",
+      "value": "Used to introduce the network request capability of RCP using the Internet network."
+    }
+  ]
+}
+
+
+

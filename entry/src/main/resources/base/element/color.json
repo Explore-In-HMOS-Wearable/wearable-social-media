@@ -1,0 +1,139 @@
+{
+  "color": [
+    {
+      "name": "main_selected",
+      "value": "#FF000000"
+    },
+    {
+      "name": "main_enselected",
+      "value": "#FF8211B3"
+    },
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "indicator_select",
+      "value": "#F74E42"
+    },
+    {
+      "name": "indicator_unselect",
+      "value": "#F3FFFFFF"
+    },
+    {
+      "name": "focus_color",
+      "value": "#E92F4F"
+    },
+    {
+      "name": "text",
+      "value": "#2c2c2c"
+    },
+    {
+      "name": "side_background_color",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "home_background_color",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "flow_image_bg_color",
+      "value": "#eaeaea"
+    },
+    {
+      "name": "flow_press_foreground_color",
+      "value": "#80000000"
+    },
+    {
+      "name": "tab_normal_color",
+      "value": "#D8D8D8"
+    },
+    {
+      "name": "text_color",
+      "value": "#E6000000"
+    },
+    {
+      "name": "index_divider_color",
+      "value": "#0D000000"
+    },
+    {
+      "name": "index_text_color",
+      "value": "#99000000"
+    },
+    {
+      "name": "sections_tab_color_selected",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "sections_tab_color_normal",
+      "value": "#124D0F83"
+    },
+    {
+      "name": "sections_back_bg",
+      "value": "#10000000"
+    },
+    {
+      "name": "linearGradient_first_color",
+      "value": "#80000000"
+    },
+    {
+      "name": "linearGradient_last_color",
+      "value": "#03000000"
+    },
+    {
+      "name": "forgot_password_blue",
+      "value": "#4285f4"
+    },
+    {
+      "name": "forgot_password_blue_disabled",
+      "value": "#58cbfd"
+    },
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "name": "light_gray",
+      "value": "#999999"
+    },
+    {
+      "name": "mid_gray",
+      "value": "#666666"
+    },
+    {
+      "name": "input_grey",
+      "value": "#EFEFEF"
+    },
+    {
+      "name": "bg_message_sender",
+      "value": "#E5E5EA"
+    },
+    {
+      "name": "white_light",
+      "value": "#F2F2F7"
+    },
+    {
+      "name": "bg_message_me",
+      "value": "#5848d5"
+    },{
+      "name": "very_light_gray",
+      "value": "#efefef"
+    },
+    {
+      "name": "gray",
+      "value": "#808080"
+    },
+    {
+      "name": "transparent_white",
+      "value": "#00FFFFFF"
+    },
+    {
+      "name": "red",
+      "value": "#FFFF0000"
+    }
+  ]
+}
