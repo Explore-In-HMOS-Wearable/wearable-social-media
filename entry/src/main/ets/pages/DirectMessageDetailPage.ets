@@ -1,8 +1,6 @@
 import { DMDetailPageHeader } from '../components/DMDetailPageHeader';
-import DMInputComponent from '../components/DMInputComponent';
+import DMInputComponent from '../components/DmInputComponent';
 import { MessageListItemComponent } from '../components/MessageListComponent';
-import { getParams } from '../RouterUtils';
-
 import { DirectMessageViewModel } from '../viewmodel/DirectMessageViewModel';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -19,7 +17,6 @@ struct DirectMessageDetailPage {
   @State chatDetailData: Array<IChatDetailData> = []
   @State directMessageViewModel: DirectMessageViewModel = new DirectMessageViewModel()
   private listScroller: Scroller = new Scroller();
-  @State userData: IUserData = getParams() as IUserData
 
   async aboutToAppear() {
 
@@ -32,7 +29,6 @@ struct DirectMessageDetailPage {
 
     Column() {
       DMDetailPageHeader({
-        userData: this.userData
       })
       List({ scroller: this.listScroller }) {
         ForEach(this.chatDetailData, (conversation: IChatDetailData) => {

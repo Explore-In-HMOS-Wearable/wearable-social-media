@@ -1,6 +1,4 @@
-import { clearBackstack, routePageNoParams, routerBack } from '../RouterUtils';
 import { rcp } from '@kit.RemoteCommunicationKit';
-import router from '@ohos.router';
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
 import { MockProfileResponse } from '../mockServices/mockData/MockProfileResponse';
 
@@ -18,8 +16,7 @@ struct EditProfilePage {
   @State currentUser: IProfileResponse = MockProfileResponse;
 
   aboutToAppear(): void {
-    const params = router.getParams();
-    this.currentUser = params as IProfileResponse
+
   }
 
   editUserData() {
@@ -51,7 +48,6 @@ struct EditProfilePage {
             .height(30)
             .objectFit(ImageFit.ScaleDown)
             .onClick(() => {
-              routerBack();
             });
 
           Text('Edit Profile')

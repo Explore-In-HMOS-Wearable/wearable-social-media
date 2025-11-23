@@ -1,5 +1,4 @@
 import { StorageManager } from '../model/StorageManager';
-import { routePageNoParams } from '../RouterUtils';
 
 @Entry
 @Component

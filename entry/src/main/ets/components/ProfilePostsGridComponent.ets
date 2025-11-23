@@ -1,5 +1,4 @@
 import { IPostData } from '../model/Interface/IPostData';
-import { routePageWithObjectParams } from '../RouterUtils';
 
 @Component
 struct ProfilePostsGridComponent {
@@ -15,7 +14,6 @@ struct ProfilePostsGridComponent {
         .objectFit(ImageFit.Cover)
     }
     .onClick(() => {
-      routePageWithObjectParams('pages/PostDetailPage', data)
     })
   }
 

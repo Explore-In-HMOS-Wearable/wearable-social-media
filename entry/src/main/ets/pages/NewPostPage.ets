@@ -84,7 +84,7 @@ struct NewPostPage {
   }
 
   async aboutToAppear() {
-    const context: common.UIAbilityContext = getContext(this) as common.UIAbilityContext;
+    const context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext;
     this.reqPermissionsFromUser(permissions, context);
   }
 
@@ -147,6 +147,7 @@ struct NewPostPage {
         left: 16,
         right: 16
       });
+
       if (this.selectedImage) {
         Image(this.selectedImage)
           .width('100%')

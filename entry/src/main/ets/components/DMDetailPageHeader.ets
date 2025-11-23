@@ -1,4 +1,3 @@
-import { routerBack } from '../RouterUtils'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { IUserData } from '../model/Interface/IUserData'
@@ -17,7 +16,6 @@ export struct DMDetailPageHeader {
         .width(24)
         .height(24)
         .onClick(() => {
-          routerBack()
         })
 
       Image((this.userData.photo))

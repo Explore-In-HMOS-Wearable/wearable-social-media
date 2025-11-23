@@ -1,7 +1,6 @@
 import { MyProfileInfoComponent } from '../components/MyProfileInfoComponent';
 import { TopBarComponent } from '../components/TopBarComponent';
 import { ProfilePostsTabComponent } from '../components/ProfilePostsTabComponent';
-import { routePageNoParams } from '../RouterUtils';
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
 import { MockProfileResponse_2 } from '../mockServices/mockData/MockProfileResponse';
 
@@ -67,7 +66,6 @@ struct ProfilePage {
   }
 
   navigateToSettingsPage() {
-    routePageNoParams('pages/SettingsPage')
   }
 
   build() {

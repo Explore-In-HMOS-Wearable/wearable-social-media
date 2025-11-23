@@ -2,6 +2,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { CommonConstants } from '../CommonConstants';
 import { SearchBarComponent } from '../components/SearchBarComponent';
 import { WaterFlowDataSource } from '../utils/WaterFlowDataSource';
+import { common } from '@kit.AbilityKit';
 
 const TAG = 'StickyPage';
 
@@ -49,7 +50,8 @@ export struct StickyPage {
   getResourceStringArray(resource: Resource): Array<string> {
     let result: Array<string> = new Array<string>();
     try {
-      result = getContext(this).resourceManager.getStringArrayValueSync(resource.id);
+      const context = this.getUIContext().getHostContext() as common.UIAbilityContext
+      result = context.resourceManager.getStringArrayValueSync(resource.id);
     } catch (e) {
       hilog.error(0x0000, TAG, `[getResourceString]getStringSync failed, error:${JSON.stringify(e)}.`);
     }

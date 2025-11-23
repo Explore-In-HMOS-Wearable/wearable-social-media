@@ -8,8 +8,9 @@ export class Utils {
     });
   }
 
-  getString(resourceId: number) {
-    let resourceManager = getContext().resourceManager
+  getString(resourceId: number, context: Context) {
+    let resourceManager = context.resourceManager
+
 
     let returnString = resourceManager.getStringSync(resourceId)
     return returnString

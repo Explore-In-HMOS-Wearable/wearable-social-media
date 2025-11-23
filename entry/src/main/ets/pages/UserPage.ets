@@ -1,7 +1,6 @@
 import { ProfileInfoComponent } from '../components/ProfileInfoComponent';
 import { ProfilePostsTabComponent } from '../components/ProfilePostsTabComponent';
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
-import { getParams, routePageNoParams } from '../RouterUtils';
 import { mockProfileResponseList } from '../mockServices/mockData/MockProfileResponseList';
 import { IUserData } from '../model/Interface/IUserData';
 

@@ -2,11 +2,8 @@ import { mockChatDetailDataList } from '../mockServices/mockData/mockChatDetailD
 import { IChatDetailData } from '../model/Interface/IChatDetailData';
 import { SendMessage } from '../model/sendMessage';
 
-@Observed
-class observedChatDetailData extends Array<IChatDetailData> {}
-
 @Component
-export default struct DMInputComponent {
+export default struct DmInputComponent {
   @State private message: string = mockChatDetailDataList[0].content;
   @State messageList: Array<IChatDetailData>=mockChatDetailDataList
 

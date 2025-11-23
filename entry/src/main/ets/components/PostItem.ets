@@ -1,4 +1,3 @@
-import { routePageWithObjectParams } from '../RouterUtils'
 import { emitter } from '@kit.BasicServicesKit'
 import { IPostData } from '../model/Interface/IPostData'
 
@@ -15,7 +14,6 @@ struct PostItem {
   openProfile() {
 
     if (this.postData.user.id) {
-      routePageWithObjectParams('pages/UserPage', this.postData.user)
     } else {
       emitter.emit('changeTab', {
         data: {

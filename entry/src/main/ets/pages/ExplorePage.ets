@@ -1,5 +1,4 @@
 import { ExploreViewModel } from '../viewmodel/ExploreViewModel';
-import { routePageWithObjectParams } from '../RouterUtils';
 import { IPostData } from '../model/Interface/IPostData';
 import { StickyPage } from './StickyPage';
 
@@ -12,7 +11,6 @@ struct ExplorePage {
   scroller: Scroller = new Scroller()
 
   private navigateToPost(params: IPostData) {
-    routePageWithObjectParams('pages/ExplorePageListView', params)
   }
 
   async getPosts() {

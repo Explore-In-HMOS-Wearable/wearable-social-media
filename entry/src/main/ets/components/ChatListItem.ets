@@ -1,5 +1,4 @@
 import { IChatData } from '../model/Interface/IChatData'
-import { routePageWithObjectParams } from '../RouterUtils'
 
 @Component
 struct ChatListItem {

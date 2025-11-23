@@ -1,6 +1,5 @@
 import { PostItem } from '../components/PostItem'
 import { ExploreViewModel } from '../viewmodel/ExploreViewModel'
-import { getParams, routerBack } from '../RouterUtils'
 import { IPostData } from '../model/Interface/IPostData'
 
 @Entry
@@ -30,7 +29,6 @@ struct ExplorePageListView {
           .width(60)
           .height(30)
           .objectFit(ImageFit.ScaleDown).onClick(() => {
-          routerBack()
         })
 
         Text($r('app.string.Explore_Text'))

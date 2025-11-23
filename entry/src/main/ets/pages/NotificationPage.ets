@@ -3,6 +3,7 @@ import { NotificationGroup } from '../components/NotificationGroup';
 import Utils from '../Utils';
 import { emitter } from '@kit.BasicServicesKit';
 import { INotification } from '../model/Interface/INotification';
+import { common } from '@kit.AbilityKit';
 
 @Entry
 @Component
@@ -34,7 +35,9 @@ struct NotificationPage {
         Column() {
           Blank().height('35vp')
           NotificationGroup({
-            title: Utils.getString($r('app.string.New_Text').id),
+            title: Utils.getString($r('app.string.New_Text').id,
+              (this.getUIContext().getHostContext() as common.UIAbilityContext)
+            ),
             notifications: this.notifications,
             onFollow: this.followUser,
           })

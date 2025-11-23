@@ -1,7 +1,6 @@
 import { ChatListItem } from '../components/ChatListItem';
 import { SearchBarComponent } from '../components/SearchBarComponent';
 import { IChatData } from '../model/Interface/IChatData';
-import { routerBack } from '../RouterUtils';
 import { DirectMessageViewModel } from '../viewmodel/DirectMessageViewModel';
 
 @Entry
@@ -25,7 +24,6 @@ struct DirectMessagePage {
         Image($r('app.media.back_icon'))
           .width(24)
           .height(24)
-          .onClick(() => routerBack())
 
         Blank()
 
