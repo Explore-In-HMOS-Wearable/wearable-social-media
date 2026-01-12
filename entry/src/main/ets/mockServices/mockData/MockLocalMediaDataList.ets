@@ -5,6 +5,6 @@ export const mockLocalMediaDataList : Array<ILocalMedia> = [
   {
     id: 1,
     imageUrl: 'string',
-    type: MediaType.Recent,
-  },
+    type: MediaType.Recent
+  }
 ]

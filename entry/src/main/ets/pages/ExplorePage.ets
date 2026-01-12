@@ -4,10 +4,10 @@ import { StickyPage } from './StickyPage';
 
 @Component
 struct ExplorePage {
-  @State searchInput: string = '';
-  @State exploreViewModel: ExploreViewModel = new ExploreViewModel()
-  @State posts: Array<IPostData> = []
-  @State isRefreshing: boolean = false
+  private searchInput: string = '';
+  private exploreViewModel: ExploreViewModel = new ExploreViewModel()
+  private posts: Array<IPostData> = []
+  private isRefreshing: boolean = false
   scroller: Scroller = new Scroller()
 
   private navigateToPost(params: IPostData) {

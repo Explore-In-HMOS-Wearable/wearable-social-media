@@ -1,26 +1,25 @@
 import { rcp } from '@kit.RemoteCommunicationKit';
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
-import { MockProfileResponse } from '../mockServices/mockData/MockProfileResponse';
+import { mockProfileResponse } from '../mockServices/mockData/MockProfileResponse';
 
 @Entry
 @Component
 struct EditProfilePage {
   @State anyChange: boolean = false;
-  @State isImagePicked: boolean = false;
+  private isImagePicked: boolean = false;
   @State selectedUris: Array<string> = [];
 
   navigateToSettingsPage() {
-    routePageNoParams('pages/SettingsPage');
   }
 
-  @State currentUser: IProfileResponse = MockProfileResponse;
+  @State currentUser: IProfileResponse = mockProfileResponse;
 
   aboutToAppear(): void {
 
   }
 
   editUserData() {
-    let tempPath = ''
+    const tempPath = ''
     if (this.selectedUris.length > 0) {
       const imageName: string = this.selectedUris[0]?.split('/').pop() || '';
 
@@ -34,9 +33,6 @@ struct EditProfilePage {
       }
     })
 
-    routePageNoParams('pages/StartupPage')
-    clearBackstack()
-
   }
 
   build() {
@@ -47,8 +43,6 @@ struct EditProfilePage {
             .width(40)
             .height(30)
             .objectFit(ImageFit.ScaleDown)
-            .onClick(() => {
-            });
 
           Text('Edit Profile')
             .fontWeight(FontWeight.Bold)
@@ -64,16 +58,14 @@ struct EditProfilePage {
             .width(120)
             .height(120)
             .borderRadius(250)
-            .onClick(() => {
-            });
+
         }
 
         Row() {
           Text('Edit your profile picture')
-
             .fontColor(Color.Blue)
             .fontWeight(FontWeight.Bold);
-        }
+        }.width('50%')
 
         Row() {
           Column() {
@@ -160,9 +152,9 @@ struct EditProfilePage {
 
         Row() {
           Button('Done')
-            .backgroundColor('#FFF')
+            .backgroundColor($r('sys.color.black'))
             .enabled(this.anyChange)
-            .fontColor(this.anyChange ? Color.Blue : Color.Gray)
+            .fontColor(this.anyChange ? Color.Blue : '#ffffff')
             .fontWeight(FontWeight.Bold)
             .onClick(() => {
               this.editUserData();

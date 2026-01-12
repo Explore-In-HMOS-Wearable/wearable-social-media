@@ -4,7 +4,7 @@ import { mockPostDataList } from './MockPostDataList';
 import { mockProfileDataResponse } from './MockProfileDataResponse';
 import { mockUserDataResponseList } from './MockUserDataResponseList';
 
-export const MockProfileResponse: IProfileResponse = {
+export const mockProfileResponse: IProfileResponse = {
   profile: mockProfileDataResponse,
   followerCount: 1,
   followingCount: 1,
@@ -12,10 +12,10 @@ export const MockProfileResponse: IProfileResponse = {
   followings: mockUserDataResponseList,
   posts: mockPostDataList,
   postCount: 1,
-  isFollowed: true,
+  isFollowed: true
 }
 
-export const MockProfileResponse_2: IProfileResponse = {
+export const mockProfileResponse2: IProfileResponse = {
   profile: mockProfileDataResponse,
   followerCount: 654,
   followingCount: 2354,
@@ -23,5 +23,5 @@ export const MockProfileResponse_2: IProfileResponse = {
   followings: mockUserDataResponseList,
   posts: mockPostDataList,
   postCount: 3,
-  isFollowed: true,
+  isFollowed: true
 }

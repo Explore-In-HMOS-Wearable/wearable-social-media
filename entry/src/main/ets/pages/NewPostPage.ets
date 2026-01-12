@@ -13,19 +13,19 @@ const permissions: Array<Permissions> = ['ohos.permission.READ_IMAGEVIDEO', 'oho
 struct NewPostPage {
   @State viewModel: NewPostViewModel = new NewPostViewModel();
   @State imageGrid: Array<LocalMedia> = [];
-  @State selectedImage: string = '';
+  private selectedImage: string = '';
   @State selectedMediaType: MediaType = MediaType.Recent;
   @State isMenuOpen: boolean = false;
-  @State selectedImageFile: string = ''
+  private selectedImageFile: string = ''
   @State imageArray: Array<Resource> = []
   @State postDescription: string = ''
   @State postLocation: string = ''
 
   reqPermissionsFromUser(permissions: Array<Permissions>, context: common.UIAbilityContext): void {
-    let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+    const atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
     atManager.requestPermissionsFromUser(context, permissions).then((data) => {
-      let grantStatus: Array<number> = data.authResults;
-      let length: number = grantStatus.length;
+      const grantStatus: Array<number> = data.authResults;
+      const length: number = grantStatus.length;
       for (let i = 0; i < length; i++) {
         if (grantStatus[i] === 0) {
 
@@ -67,17 +67,14 @@ struct NewPostPage {
           }).margin({ top: 10 })
         Button('Share Post')
           .width('100%')
-          .onClick(() => {
-
-
-          }).margin({ top: 10 })
+          .margin({ top: 10 })
       }.padding({ top: 20, right: 10, left: 10 })
     }
   }
 
   async getImagesFromGallery() {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
+    const predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+    const fetchOption: photoAccessHelper.FetchOptions = {
       fetchColumns: [],
       predicates: predicates
     };
@@ -114,8 +111,6 @@ struct NewPostPage {
           .textAlign(TextAlign.Start)
           .layoutWeight(1)
           .fontWeight(FontWeight.Normal)
-          .onClick(() => {
-          });
 
         Text(this.selectedMediaType.charAt(0).toUpperCase() + this.selectedMediaType.slice(1))
           .fontSize(16)
@@ -124,7 +119,7 @@ struct NewPostPage {
           .bindMenu([
             { value: $r('app.string.Recent'), action: () => this.changeMediaType(MediaType.Recent) },
             { value: $r('app.string.Favorites'), action: () => this.changeMediaType(MediaType.Favorites) },
-            { value: $r('app.string.Videos'), action: () => this.changeMediaType(MediaType.Videos) },
+            { value: $r('app.string.Videos'), action: () => this.changeMediaType(MediaType.Videos) }
           ])
           .fontWeight(FontWeight.Bold);
 

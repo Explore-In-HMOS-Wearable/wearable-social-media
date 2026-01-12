@@ -6,8 +6,8 @@ import { DirectMessageViewModel } from '../viewmodel/DirectMessageViewModel';
 @Entry
 @Component
 struct DirectMessagePage {
-  @State message: string = 'DirectMessage Page';
-  @State directMessageViewModel: DirectMessageViewModel = new DirectMessageViewModel()
+  private message: string = 'DirectMessage Page';
+  private directMessageViewModel: DirectMessageViewModel = new DirectMessageViewModel()
   @State chatData: Array<IChatData> = []
   @State searchInput: string = '';
 
@@ -46,6 +46,7 @@ struct DirectMessagePage {
           }
         }, (item: string, index: number) => item)
       }
+      .height('90%')
       .width('100%')
       .layoutWeight(1)
     }

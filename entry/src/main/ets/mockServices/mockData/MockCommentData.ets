@@ -1,5 +1,5 @@
 import { ICommentData } from '../../model/Interface/ICommentData'
-import { mockUserData_3 } from './MockUserData'
+import { mockUserData3 } from './MockUserData'
 
 export const mockCommentData : ICommentData =
   {
@@ -7,5 +7,5 @@ export const mockCommentData : ICommentData =
     profileName: 'John Doe Comment',
     createdAt: '15 minutes ago',
     content: 'Content Comment',
-    user: mockUserData_3
+    user: mockUserData3
   }

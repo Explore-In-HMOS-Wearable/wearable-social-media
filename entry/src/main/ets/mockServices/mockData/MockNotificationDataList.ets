@@ -1,12 +1,15 @@
 import { INotification } from '../../model/Interface/INotification';
 import { NotificationType } from '../../model/NotificationModel';
 import { mockPostData } from './MockPostData';
-import { mockUserData_2, mockUserData_3 } from './MockUserData';
+import { mockUserData2, mockUserData3 } from './MockUserData';
 
 const timestamp: number = Date.now();
 const dateFromTimestamp: Date = new Date(timestamp);
-dateFromTimestamp.setMinutes(dateFromTimestamp.getMinutes() + Math.floor(Math.random() * 27) + 1)
+dateFromTimestamp.setMinutes(dateFromTimestamp.getMinutes() + Math.floor(getRandomInt(2) * 27) + 1)
 
+function getRandomInt(max: number): number {
+  return Math.floor((Date.now() % 10000) / 10000 * max);
+}
 
 export const mockNotificationDataList: Array<INotification> = [
   {
@@ -16,7 +19,7 @@ export const mockNotificationDataList: Array<INotification> = [
     type: NotificationType.Follow,
     content: 'John Doe followed you',
     post: mockPostData,
-    fromUser: mockUserData_2
+    fromUser: mockUserData2
   },
   {
     id: 2,
@@ -25,6 +28,6 @@ export const mockNotificationDataList: Array<INotification> = [
     type: NotificationType.Like,
     content: 'Your friend like your post',
     post: mockPostData,
-    fromUser: mockUserData_3
+    fromUser: mockUserData3
   }
 ]

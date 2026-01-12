@@ -1,5 +1,5 @@
 import { IChatData } from '../../model/Interface/IChatData';
-import { mockUserData_2 } from './MockUserData';
+import { mockUserData2 } from './MockUserData';
 
 const timestamp: number = Date.now();
 
@@ -12,7 +12,7 @@ export const mockChatData : IChatData = {
   lastMessage: 'This is mock message',
   time: '10 minutes ago',
   unread: false,
-  user: mockUserData_2,
+  user: mockUserData2,
   isSender: false,
-  createdAt: dateFromTimestamp,
+  createdAt: dateFromTimestamp
 }

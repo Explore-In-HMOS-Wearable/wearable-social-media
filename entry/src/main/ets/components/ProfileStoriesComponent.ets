@@ -11,8 +11,8 @@ struct ProfileStoriesComponent {
         Image(resource).width(10).height(10)
         Text(item)
       }.alignItems(HorizontalAlign.Center).justifyContent(FlexAlign.Center)
-    }.width('30%').height('10%').onClick(() => {
-    })
+    }.width('30%').height('10%')
+    
   }
 
   build() {

@@ -31,7 +31,7 @@ export default struct CommentInput {
       Row() {
         TextInput({
           placeholder: 'Add a comment...',
-          text: this.message,
+          text: this.message
         })
           .height(40)
           .width('90%')
@@ -44,7 +44,7 @@ export default struct CommentInput {
           });
         Button({
           type: ButtonType.Normal,
-          stateEffect: true,
+          stateEffect: true
         }) {
           Image($r('app.media.share_icon'))
             .width(20)

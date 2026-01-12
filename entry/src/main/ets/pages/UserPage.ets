@@ -7,20 +7,7 @@ import { IUserData } from '../model/Interface/IUserData';
 @Entry
 @Component
 struct UserPage {
-  @Prop currentUser: IUserData
   @State currentUserProfile: IProfileResponse = mockProfileResponseList[0]
-
-  aboutToAppear(): void {
-    this.currentUser = getParams() as IUserData
-
-    this.currentUserProfile =
-      mockProfileResponseList.find((item) => item.profile.user.id === this.currentUser.id) as IProfileResponse
-
-  }
-
-  navigateToSettingsPage() {
-    routePageNoParams('pages/SettingsPage')
-  }
 
   build() {
     Scroll() {

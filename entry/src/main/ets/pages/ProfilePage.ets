@@ -2,15 +2,15 @@ import { MyProfileInfoComponent } from '../components/MyProfileInfoComponent';
 import { TopBarComponent } from '../components/TopBarComponent';
 import { ProfilePostsTabComponent } from '../components/ProfilePostsTabComponent';
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
-import { MockProfileResponse_2 } from '../mockServices/mockData/MockProfileResponse';
+import { mockProfileResponse2 } from '../mockServices/mockData/MockProfileResponse';
 
 @Entry
 @Component
 struct ProfilePage {
-  @State shouldShowSettingsPage: boolean = false
+  private shouldShowSettingsPage: boolean = false
   @State showFollowers: boolean = false
   @State showFollowings: boolean = false
-  @State currentUser: IProfileResponse = MockProfileResponse_2
+  @State currentUser: IProfileResponse = mockProfileResponse2
 
   @Builder
   FollowerList() {
@@ -34,6 +34,8 @@ struct ProfilePage {
           }
         }, (item: string, index: number) => item)
       }
+      .width('100%')
+      .height('100%')
     }.padding(20)
   }
 
@@ -58,6 +60,8 @@ struct ProfilePage {
           }
         }, (item: string, index: number) => item)
       }
+      .width('100%')
+      .height('100%')
     }.padding(20)
   }
 
@@ -73,7 +77,6 @@ struct ProfilePage {
 
       Column({ space: 3 }) {
         TopBarComponent({
-          user: this.currentUser,
           onClickFunction: this.navigateToSettingsPage
         })
         MyProfileInfoComponent({

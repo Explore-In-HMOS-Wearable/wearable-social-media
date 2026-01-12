@@ -3,7 +3,7 @@ import { CommentService } from '../service/CommentService';
 import { mockCommentData } from './mockData/MockCommentData';
 import { mockCommentDataList } from './mockData/MockCommentDataList';
 
-export class MockCommentService extends CommentService{
+export class MockCommentService extends CommentService {
 
 
   async fetchComments(postId: number): Promise<ICommentData[]> {

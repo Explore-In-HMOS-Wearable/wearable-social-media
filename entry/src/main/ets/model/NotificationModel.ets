@@ -3,7 +3,7 @@ import { IUserData } from './Interface/IUserData';
 export enum NotificationType {
   Follow = 'follow_request',
   Like = 'like',
-  Comment = 'comment',
+  Comment = 'comment'
 }
 
 export interface NotificationModel {

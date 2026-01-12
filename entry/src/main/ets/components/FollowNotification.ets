@@ -4,7 +4,7 @@ import Utils from '../Utils';
 @Component
 struct FollowNotification {
   @Prop notification: INotification;
-  @State isFollowing: boolean = false;
+  private isFollowing: boolean = false;
   onFollow: (id: number) => void = () => {
   };
 
@@ -16,8 +16,8 @@ struct FollowNotification {
           .height(22)
           .borderRadius(22);
         Text() {
-          Span(this.notification.fromUser.username + '\n ').fontWeight(FontWeight.Bold);
-          Span(this.notification.content + ' ');
+          Span(this.notification.fromUser.username + `\n `).fontWeight(FontWeight.Bold);
+          Span(this.notification.content + ` `);
 
         }
         .margin({ left: 10 })
@@ -30,7 +30,7 @@ struct FollowNotification {
           Text() {
             Span(Utils.formatTime(new Date(this.notification.createdAt.toString().replace('.000Z', ''))))
               .fontColor(Color.Gray)
-              .fontSize(7);
+              .fontSize('8fp');
           }
           .textAlign(TextAlign.Start)
         }

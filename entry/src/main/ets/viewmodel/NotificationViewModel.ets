@@ -1,5 +1,5 @@
 import { mockPostData } from '../mockServices/mockData/MockPostData';
-import { mockUserData_2, mockUserData_3 } from '../mockServices/mockData/MockUserData';
+import { mockUserData2, mockUserData3 } from '../mockServices/mockData/MockUserData';
 import { MockNotificationService } from '../mockServices/MockNotificationService';
 import { INotification } from '../model/Interface/INotification';
 import { NotificationType } from '../model/NotificationModel';
@@ -75,7 +75,7 @@ export const mockNotificationDataList: Array<INotification> = [
     type: NotificationType.Follow,
     content: 'followed you',
     post: mockPostData,
-    fromUser: mockUserData_2
+    fromUser: mockUserData2
   },
   {
     id: 2,
@@ -84,6 +84,6 @@ export const mockNotificationDataList: Array<INotification> = [
     type: NotificationType.Like,
     content: 'liked your post',
     post: mockPostData,
-    fromUser: mockUserData_3
+    fromUser: mockUserData3
   }
 ]

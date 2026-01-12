@@ -10,7 +10,7 @@ export const mockUserData: IUserData = {
   photo: $r('app.media.pic1')
 };
 
-export const mockUserData_2: IUserData = {
+export const mockUserData2: IUserData = {
   id: 2,
   username: 'Jackson Davis',
   email: 'jackson.davis@example.com',
@@ -19,7 +19,7 @@ export const mockUserData_2: IUserData = {
   photo: $r('app.media.pic2')
 };
 
-export const mockUserData_3: IUserData = {
+export const mockUserData3: IUserData = {
   id: 3,
   username: 'Olivia Wilson',
   email: 'olivia.wilson@example.com',

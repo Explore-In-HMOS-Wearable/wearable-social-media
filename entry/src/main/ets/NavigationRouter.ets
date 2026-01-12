@@ -7,7 +7,7 @@ import { Splash } from './pages/Splash';
 struct NavigationRouter {
   pageInfos: NavPathStack = new NavPathStack()
   private tabsController: TabsController = new TabsController();
-  @State currentIndex: number = 0;
+  private currentIndex: number = 0;
 
   @Builder
   routerMap(builderName: string, param: object) {

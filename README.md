@@ -1,3 +1,4 @@
+
 > **Note:** To access all shared projects, get information about environment setup, and view other guides, please visit [Explore-In-HMOS-Wearable Index](https://github.com/Explore-In-HMOS-Wearable/hmos-index).
 
 # SocialMedia Wearable
@@ -8,12 +9,11 @@ Media app. Lets you browse timeline, notifications, and react—all from your we
 
 # Preview
 <div>
-    <img src="./imgs/img11.png" width="24%"/>
-    <img src="./imgs/img12.png" width="24%"/>
-    <img src="./imgs/img13.png" width="24%"/>
-    <img src="./imgs/img14.png" width="24%"/>
+    <img src="./screenshots/img11.png" width="24%"/>
+    <img src="./screenshots/img12.png" width="24%"/>
+    <img src="./screenshots/img13.png" width="24%"/>
+    <img src="./screenshots/img14.png" width="24%"/>
 </div>
-
 
 # Use Cases
 
@@ -31,12 +31,99 @@ Media app. Lets you browse timeline, notifications, and react—all from your we
 - **Frameworks**: HarmonyOS SDK 5.0.0(12)
 - **Libraries**: @kit.ArkUI, @kit.ArkData
 
+# Directory Structure
+
+```
+ets
+├─ CommonConstants.ets
+├─ NavigationRouter.ets
+├─ RouterUtils.ets
+├─ Utils.ets
+├─ components
+│  ├─ ChatListItem.ets
+│  ├─ CommenItem.ets
+│  ├─ CommentInput.ets
+│  ├─ DMDetailPageHeader.ets
+│  ├─ DmInputComponent.ets
+│  ├─ ExploreGridComponent.ets
+│  ├─ FollowNotification.ets
+│  ├─ LikeNotification.ets
+│  ├─ MessageListComponent.ets
+│  ├─ MultipleLikeNotification.ets
+│  ├─ MyProfileInfoComponent.ets
+│  ├─ NotificationGroup.ets
+│  ├─ PostItem.ets
+│  ├─ ProfileInfoComponent.ets
+│  ├─ ProfileMentionedPostsGridComponent.ets
+│  ├─ ProfilePostsGridComponent.ets
+│  ├─ ProfilePostsTabComponent.ets
+│  ├─ ProfileStoriesComponent.ets
+│  ├─ SearchBarComponent.ets
+│  ├─ SectionTitle.ets
+│  ├─ TopBarComponent.ets
+├─ entryability
+│  └─ EntryAbility.ets
+├─ entrybackupability
+│  └─ EntryBackupAbility.ets
+├─ model
+│  ├─ ChatData.ets
+│  ├─ ChatDetailData.ets
+│  ├─ CommentData.ets
+│  ├─ CommentResponse.ets
+│  ├─ LocalMedia.ets
+│  ├─ NotificationModel.ets
+│  ├─ PostData.ets
+│  ├─ ProfileData.ets
+│  ├─ ProfileResponse.ets
+│  ├─ sendMessage.ets
+│  ├─ StorageManager.ets
+│  ├─ UserData.ets
+│  ├─ WsMessageResponse.ets
+│  ├─ WsNotificationData.ets
+│  
+│  
+│   
+├─ pages
+│  ├─ DirectMessageDetailPage.ets
+│  ├─ DirectMessagePage.ets
+│  ├─ EditProfilePage.ets
+│  ├─ ExplorePage.ets
+│  ├─ ExplorePageListView.ets
+│  ├─ HomePage.ets
+│  ├─ MainPage.ets
+│  ├─ MenuPage.ets
+│  ├─ NewPostPage.ets
+│  ├─ NotificationPage.ets
+│  ├─ PostDetailPage.ets
+│  ├─ ProfilePage.ets
+│  ├─ Splash.ets
+│  ├─ StartupPage.ets
+│  ├─ StickyPage.ets
+│  └─ UserPage.ets
+├─ service
+│  ├─ CommentService.ets
+│  ├─ DirectMessageService.ets
+│  ├─ ExploreService.ets
+│  ├─ MediaService.ets
+│  ├─ NotificationService.ets
+│  ├─ PostService.ets
+│  └─ UserService.ets
+├─ utils
+│  └─ WaterFlowDataSource.ets
+└─ viewmodel
+   ├─ DirectMessageViewModel.ets
+   ├─ ExploreViewModel.ets
+   ├─ NewPostViewModel.ets
+   ├─ NotificationViewModel.ets
+   ├─ PostViewModel.ets
+   └─ ProfileViewModel.ets
+```
 
 # Constraints and Restrictions
 
 - CompatibleSDKVersion: 5.0.0(12)
 
-## Suported Devices
+## Supported Devices
 
 - Huawei Watch 5
 

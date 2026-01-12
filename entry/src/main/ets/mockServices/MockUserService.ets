@@ -1,10 +1,10 @@
 import { IProfileResponse } from '../model/Interface/IProfileResponse';
 import { UserService } from '../service/UserService';
-import { MockProfileResponse } from './mockData/MockProfileResponse';
+import { mockProfileResponse } from './mockData/MockProfileResponse';
 
 export class MockUserService extends UserService {
   async fetchUser(): Promise<IProfileResponse> {
-    return MockProfileResponse
+    return mockProfileResponse
   }
 
   async followUser(userId: number): Promise<boolean> {

@@ -13,8 +13,6 @@ struct ProfileMentionedPostsGridComponent {
         .height(this.customSize)
         .objectFit(ImageFit.Cover)
     }
-    .onClick(() => {
-    })
   }
 
   build() {

@@ -39,7 +39,7 @@ struct NotificationPage {
               (this.getUIContext().getHostContext() as common.UIAbilityContext)
             ),
             notifications: this.notifications,
-            onFollow: this.followUser,
+            onFollow: this.followUser
           })
 
           Blank().height('35vp')
@@ -49,7 +49,7 @@ struct NotificationPage {
           top: 1,
           bottom: 5,
           left: 16,
-          right: 16,
+          right: 16
         })
 
         .margin({

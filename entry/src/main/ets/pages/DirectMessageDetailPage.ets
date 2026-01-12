@@ -1,10 +1,8 @@
 import { DMDetailPageHeader } from '../components/DMDetailPageHeader';
-import DMInputComponent from '../components/DmInputComponent';
 import { MessageListItemComponent } from '../components/MessageListComponent';
 import { DirectMessageViewModel } from '../viewmodel/DirectMessageViewModel';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { IUserData } from '../model/Interface/IUserData';
 import { IChatDetailData } from '../model/Interface/IChatDetailData';
 
 dayjs.extend(relativeTime)
@@ -12,10 +10,10 @@ dayjs.extend(relativeTime)
 @Entry
 @Component
 struct DirectMessageDetailPage {
-  @State message: string = 'DirectMessageDetail Page';
-  @State newMessage: string = ''
-  @State chatDetailData: Array<IChatDetailData> = []
-  @State directMessageViewModel: DirectMessageViewModel = new DirectMessageViewModel()
+  private message: string = 'DirectMessageDetail Page';
+  private newMessage: string = ''
+  private chatDetailData: Array<IChatDetailData> = []
+  private directMessageViewModel: DirectMessageViewModel = new DirectMessageViewModel()
   private listScroller: Scroller = new Scroller();
 
   async aboutToAppear() {
@@ -28,8 +26,7 @@ struct DirectMessageDetailPage {
   build() {
 
     Column() {
-      DMDetailPageHeader({
-      })
+      DMDetailPageHeader({})
       List({ scroller: this.listScroller }) {
         ForEach(this.chatDetailData, (conversation: IChatDetailData) => {
           ListItem() {
@@ -37,15 +34,17 @@ struct DirectMessageDetailPage {
               chatDetailData: conversation
             })
           }
+          .width('70%')
+          .height('70%')
+
         }, (item: string, index: number) => item)
 
-      }.width('100%')
+      }
+      .width('100%')
+      .height('100%')
       .layoutWeight(1)
       .backgroundColor($r('app.color.white_light'))
 
-      DMInputComponent({
-        messageList: this.chatDetailData
-      })
     }
     .width('100%')
     .height('100%')

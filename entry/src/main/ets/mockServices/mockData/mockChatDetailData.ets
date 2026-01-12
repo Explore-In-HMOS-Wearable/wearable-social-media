@@ -12,6 +12,6 @@ export const mockChatDetailDataList : Array<IChatDetailData> = [
     content: 'Example Mock Last Message',
     createdAt: dateFromTimestamp,
     sender: mockUserData,
-    receiver: mockUserData,
+    receiver: mockUserData
   }
 ]

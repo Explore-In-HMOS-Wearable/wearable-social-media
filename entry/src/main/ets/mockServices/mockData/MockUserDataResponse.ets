@@ -9,12 +9,12 @@ export const mockUserDataResponse : IUserDataResponse = {
   id: 2,
   username: 'John Doe',
   email: 'example@example.com',
-  createdAt: dateFromTimestamp,
+  createdAt: dateFromTimestamp
 }
 
-export const mockUserDataResponse_2 : IUserDataResponse = {
+export const mockUserDataResponse2 : IUserDataResponse = {
   id: 1,
   username: 'Tom Doe',
   email: 'example@example.com',
-  createdAt: dateFromTimestamp,
+  createdAt: dateFromTimestamp
 }

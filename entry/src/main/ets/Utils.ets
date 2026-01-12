@@ -2,18 +2,19 @@ import { promptAction } from '@kit.ArkUI';
 
 export class Utils {
   showToast(message: string | Resource) {
-    promptAction.showToast({
-      message: message,
-      duration: 1000
-    });
+
   }
 
   getString(resourceId: number, context: Context) {
-    let resourceManager = context.resourceManager
+    const resourceManager = context.resourceManager
 
 
-    let returnString = resourceManager.getStringSync(resourceId)
+    const returnString = resourceManager.getStringSync(resourceId)
     return returnString
+  }
+
+  private getRandomInt(max: number): number {
+    return Math.floor((Date.now() % 10000) / 10000 * max);
   }
 
   formatTime(date: Date): string {
@@ -27,7 +28,7 @@ export class Utils {
     const diffInWeeks = Math.floor(diffInDays / 7);
     const diffInMonths = Math.floor(diffInDays / 30);
 
-    diffInMinutes = Math.floor(Math.random() * 100) + 3
+    diffInMinutes = Math.floor(this.getRandomInt(1) * 100) + 3
 
     if (diffInMinutes < 60) {
       return `${diffInMinutes}m`;
@@ -50,9 +51,9 @@ export enum SettingsItemType {
   YourOrders = 'Your orders and fundraisers',
   MoreInfo = 'More info and support',
   AlsoFrom = 'Also from Our Community',
-  Login = 'Login',
+  Login = 'Login'
 }
 
-let commonUtils = new Utils();
+const commonUtils = new Utils();
 
 export default commonUtils as Utils

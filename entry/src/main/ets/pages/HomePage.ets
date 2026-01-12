@@ -7,7 +7,7 @@ import { ICommentData } from '../model/Interface/ICommentData'
 import { mockCommentDataList } from '../mockServices/mockData/MockCommentDataList'
 
 import { ComponentContent } from '@kit.ArkUI'
-import { mockUserData, mockUserData_3 } from '../mockServices/mockData/MockUserData'
+import { mockUserData, mockUserData3 } from '../mockServices/mockData/MockUserData'
 
 @Builder
 function buildText() {
@@ -28,12 +28,12 @@ export function HomePageBuilder(name: string, param: Object) {
 @Component
 export struct HomePage {
   pageInfos: NavPathStack = new NavPathStack();
-  @State postViewModel: PostViewModel = new PostViewModel()
+  private postViewModel: PostViewModel = new PostViewModel()
   @State posts: Array<IPostData> = mockPostDataList;
   @State selectedComments: Array<ICommentData> = mockCommentDataList
-  @State isRefreshing: boolean = false
+  private isRefreshing: boolean = false
   @State isPresent: boolean = false;
-  @State showDragBar: boolean = true;
+  private showDragBar: boolean = true;
   @State sheetHeight: number | SheetSize | null | undefined = 600;
   @State selectedPostId: number = 0;
 
@@ -48,7 +48,7 @@ export struct HomePage {
 
         ForEach(this.selectedComments, (comment: ICommentData) => {
           CommentItem({
-            comment: comment,
+            comment: comment
           })
         }, (item: string, index: number) => item)
       }
@@ -127,8 +127,8 @@ export const mockPostDataList: Array<IPostData> = [
     likeCount: 10,
     commentCount: 1,
     publishDate: timestamp,
-    user: mockUserData_3,
-    location: 'Canada',
+    user: mockUserData3,
+    location: 'Canada'
   },
   {
     id: 2,
@@ -141,7 +141,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
   },
   {
     id: 3,
@@ -154,7 +154,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
   },
   {
     id: 3,
@@ -167,7 +167,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
   },
   {
     id: 3,
@@ -180,7 +180,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
   },
   {
     id: 3,
@@ -193,7 +193,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
   },
   {
     id: 3,
@@ -206,20 +206,20 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Canada',
+    location: 'Canada'
+  },
+  {
+    id: 3,
+    username: '',
+    likes: 1,
+    description: 'It is good post',
+    isLiked: true,
+    photo: $r('app.media.post8'),
+    likeCount: 5,
+    commentCount: 1,
+    publishDate: timestamp,
+    user: mockUserData,
+    location: 'Canada'
   }
-  , {
-  id: 3,
-  username: '',
-  likes: 1,
-  description: 'It is good post',
-  isLiked: true,
-  photo: $r('app.media.post8'),
-  likeCount: 5,
-  commentCount: 1,
-  publishDate: timestamp,
-  user: mockUserData,
-  location: 'Canada',
-}
 ]
 

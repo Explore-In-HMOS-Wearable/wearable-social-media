@@ -7,5 +7,5 @@ export interface LocalMedia {
 export enum MediaType {
   Recent = 'recent',
   Favorites = 'favorites',
-  Videos = 'videos',
+  Videos = 'videos'
 }

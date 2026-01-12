@@ -9,7 +9,7 @@ let storageTemp: preferences.Preferences;
 export class StorageManager {
 
   async getFromStorage(context: common.Context, url: string) {
-    let name = url;
+    const name = url;
     try {
       storage = await preferences.getPreferences(context, `${name}`);
     } catch (err) {

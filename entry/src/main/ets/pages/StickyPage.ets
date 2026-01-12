@@ -3,18 +3,18 @@ import { CommonConstants } from '../CommonConstants';
 import { SearchBarComponent } from '../components/SearchBarComponent';
 import { WaterFlowDataSource } from '../utils/WaterFlowDataSource';
 import { common } from '@kit.AbilityKit';
+import cryptoFramework from '@ohos.security.cryptoFramework';
 
 const TAG = 'StickyPage';
 
-@Entry
 @Component
 export struct StickyPage {
-  @State arr: number[] = CommonConstants.ARR;
-  @State colors: number[] = CommonConstants.COLORS;
-  @State scrollOffset: number = 0;
-  @State minSize: number = 80;
-  @State maxSize: number = 180;
-  @State sections: WaterFlowSections = new WaterFlowSections();
+  private arr: number[] = CommonConstants.ARR;
+  private colors: number[] = CommonConstants.COLORS;
+  private scrollOffset: number = 0;
+  private minSize: number = 80;
+  private maxSize: number = 180;
+  private sections: WaterFlowSections = new WaterFlowSections();
   scroller: Scroller = new Scroller();
   dataCount: number = 100;
   dataSource: WaterFlowDataSource = new WaterFlowDataSource();
@@ -32,7 +32,7 @@ export struct StickyPage {
       right: 0
     },
     onGetItemMainSizeByIndex: (index: number) => {
-      if (index == 1) {
+      if (index === 1) {
         return 100;
       } else {
         return 200;
@@ -48,7 +48,7 @@ export struct StickyPage {
   };
 
   getResourceStringArray(resource: Resource): Array<string> {
-    let result: Array<string> = new Array<string>();
+    let result: string[] = []
     try {
       const context = this.getUIContext().getHostContext() as common.UIAbilityContext
       result = context.resourceManager.getStringArrayValueSync(resource.id);
@@ -58,25 +58,20 @@ export struct StickyPage {
     return result;
   }
 
-  getSize() {
-    let ret = Math.floor(Math.random() * this.maxSize);
-    return (ret > this.minSize ? ret : this.minSize);
-  }
-
-  setItemSizeArray() {
+  async setItemSizeArray() {
     for (let i = 0; i < 100; i++) {
-      this.itemWidthArray.push(this.getSize());
-      this.itemHeightArray.push(this.getSize());
+      this.itemWidthArray.push(await getSize());
+      this.itemHeightArray.push(await getSize());
     }
   }
 
   aboutToAppear() {
     this.setItemSizeArray()
-    let sectionOptions: SectionOptions[] = [];
+    const sectionOptions: SectionOptions[] = [];
     let count = 0;
     let oneOrTwo = 0;
     while (count < this.dataCount) {
-      if (oneOrTwo++ % 2 == 0) {
+      if (oneOrTwo++ % 2 === 0) {
         sectionOptions.push(this.oneColumnSection);
         count += this.oneColumnSection.itemsCount;
       } else {
@@ -85,6 +80,7 @@ export struct StickyPage {
       }
     }
     this.sections.splice(-1, 0, sectionOptions)
+
   }
 
   build() {
@@ -98,22 +94,19 @@ export struct StickyPage {
 
 @Component
 struct WaterFlowComponent {
-  @State minSize: number = 80;
-  @State maxSize: number = 180;
-  @State colors: number[] = [0xFFC0CB, 0xDA70D6, 0x6B8E23, 0x6A5ACD, 0x00FFFF, 0x00FF7F];
+  private minSize: number = 80;
+  private maxSize: number = 180;
+  private colors: number[] = [0xFFC0CB, 0xDA70D6, 0x6B8E23, 0x6A5ACD, 0x00FFFF, 0x00FF7F];
   dataSource: WaterFlowDataSource = new WaterFlowDataSource();
   scroller: Scroller = new Scroller();
   private itemWidthArray: number[] = [];
   private itemHeightArray: number[] = [];
   @State searchInput: string = '';
-  getSize() {
-    let ret = Math.floor(Math.random() * this.maxSize);
-    return (ret > this.minSize ? ret : this.minSize);
-  }
-  setItemSizeArray() {
+
+  async setItemSizeArray() {
     for (let i = 0; i < 100; i++) {
-      this.itemWidthArray.push(this.getSize());
-      this.itemHeightArray.push(this.getSize());
+      this.itemWidthArray.push(await getSize());
+      this.itemHeightArray.push(await getSize());
     }
   }
 
@@ -135,7 +128,7 @@ struct WaterFlowComponent {
             this.ImageRelative(item)
           }
           .onAppear(() => {
-            if (item + 20 == this.dataSource.totalCount()) {
+            if (item + 20 === this.dataSource.totalCount()) {
               for (let i = 0; i < 100; i++) {
                 this.dataSource.addLastItem()
               }
@@ -199,4 +192,20 @@ struct WaterFlowComponent {
   }
 }
 
+async function getSize() {
+  const ret = (getRandomValue() * 180);
+  return (ret > 80 ? ret : 80);
+}
 
+function getRandomValue(): number {
+  try {
+    const random = cryptoFramework.createRandom();
+    const randomBytes = random.generateRandomSync(4);
+    const view = new DataView(randomBytes.data.buffer);
+    const randomUint32 = view.getUint32(0, false);
+    return randomUint32 / 4294967296;
+  } catch (error) {
+    console.error('Random generation error:', error);
+    return 1
+  }
+}

@@ -10,13 +10,11 @@ export struct DMDetailPageHeader {
 
   build() {
     Row({
-      space: 8,
+      space: 8
     }) {
       Image($r('app.media.back_icon'))
         .width(24)
         .height(24)
-        .onClick(() => {
-        })
 
       Image((this.userData.photo))
         .width(36)

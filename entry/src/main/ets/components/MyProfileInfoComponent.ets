@@ -2,7 +2,7 @@ import { IProfileResponse } from '../model/Interface/IProfileResponse';
 
 @Component
 struct MyProfileInfoComponent {
-  @Prop user: IProfileResponse
+  @Prop @Watch('onUserChange') user: IProfileResponse
   onFollowerClick: () => void = () => {
   }
   onFollowingClick: () => void = () => {
@@ -25,7 +25,7 @@ struct MyProfileInfoComponent {
           Column({ space: 6 }) {
             Text(this.user?.postCount?.toString())
             Text($r('app.string.Posts_Text'))
-              .fontSize(7)
+              .fontSize('8fp')
 
           }.height('100%')
           .alignItems(HorizontalAlign.Center)
@@ -35,7 +35,7 @@ struct MyProfileInfoComponent {
           Column({ space: 6 }) {
             Text(this.user?.followerCount?.toString())
             Text($r('app.string.Followers_Text'))
-              .fontSize(7)
+              .fontSize('8fp')
 
           }
           .height('100%')
@@ -50,7 +50,7 @@ struct MyProfileInfoComponent {
           Column({ space: 6 }) {
             Text(this.user?.followingCount?.toString())
             Text($r('app.string.Following_Text'))
-              .fontSize(7)
+              .fontSize('8fp')
 
           }
           .width('33%')
@@ -78,6 +78,10 @@ struct MyProfileInfoComponent {
     .alignItems(HorizontalAlign.Center)
     .justifyContent(FlexAlign.Start)
     .margin({ top: '1%' })
+  }
+
+  onUserChange(changedPropertyName: string) {
+
   }
 }
 

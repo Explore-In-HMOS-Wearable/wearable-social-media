@@ -7,6 +7,6 @@ export const mockUserDataResponseList : Array<IUserDataResponse> = [
     id: 1,
     username: 'Tom',
     email: 'example@example.com',
-    createdAt: dateFromTimestamp,
+    createdAt: dateFromTimestamp
   }
 ]

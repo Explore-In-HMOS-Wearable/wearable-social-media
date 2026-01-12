@@ -4,7 +4,7 @@ import { ProfilePostsGridComponent } from './ProfilePostsGridComponent'
 
 @Component
 struct ProfilePostsTabComponent {
-  @Prop user: IProfileResponse
+  @Prop @Watch('onUserData') user: IProfileResponse
   @Prop userMentionedPosts: Array<IPostData>
   @State currentIndex: number = 0
   private tabsController: TabsController = new TabsController()
@@ -27,6 +27,9 @@ struct ProfilePostsTabComponent {
 
   build() {
     ProfilePostsGridComponent({ userPosts: this.user.posts })
+  }
+
+  onUserData(changedPropertyName: string) {
   }
 }
 

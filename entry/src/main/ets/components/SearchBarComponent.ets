@@ -33,11 +33,11 @@ struct SearchBarComponent {
         .backgroundColor(Color.White)
         .fontColor(Color.Black)
         .foregroundColor(Color.Blue)
-        .minFontSize('15.00px')
+        .minFontSize('15fp')
         .placeholderFont({ size: 12, weight: 400 })
         .textFont({ size: 14, weight: 400 })
         .placeholderColor('#ad303030')
-        .maxFontSize('23.00px')
+        .maxFontSize('23fp')
     }
     .height('30vp')
     .width('100%')

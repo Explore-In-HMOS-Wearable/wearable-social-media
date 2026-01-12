@@ -13,8 +13,8 @@ struct LikeNotification {
           .height(22)
           .borderRadius(22);
         Text() {
-          Span(this.notification.fromUser.username + '\n ').fontWeight(FontWeight.Bold);
-          Span(this.notification.content + ' ');
+          Span(this.notification.fromUser.username + `\n `).fontWeight(FontWeight.Bold);
+          Span(this.notification.content + ` `);
         }
         .margin({ left: 10 })
         .fontSize(9)
@@ -25,7 +25,7 @@ struct LikeNotification {
           Text() {
             Span(Utils.formatTime(new Date(this.notification.createdAt.toString().replace('.000Z', ''))))
               .fontColor(Color.Gray)
-              .fontSize(7);
+              .fontSize('8fp');
           }
           .textAlign(TextAlign.Start)
         }

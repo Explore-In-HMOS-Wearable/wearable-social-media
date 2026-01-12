@@ -37,8 +37,7 @@ export class ExploreViewModel {
       this._isLoading = false
 
       updateCallback(this._posts, this._isLoading, this._error)
-    }
-    catch (error) {
+    } catch (error) {
       this._error = 'Error when loading posts'
       this._isLoading = false
 

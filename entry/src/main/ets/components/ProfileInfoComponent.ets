@@ -6,8 +6,8 @@ interface Follow {
 
 @Component
 struct ProfileInfoComponent {
-  @Prop user: IProfileResponse;
-  @State followState: boolean = false;
+  @Prop @Watch('onUserData') user: IProfileResponse;
+  private followState: boolean = false;
 
   build() {
     Column({ space: 10 }) {
@@ -77,10 +77,11 @@ struct ProfileInfoComponent {
           .width('100%')
           .height('80%')
           .backgroundColor($r('app.color.forgot_password_blue'))
-          .fontColor($r('app.color.white'));
+          .fontColor($r('app.color.black'));
       }
       .height('15%')
       .width('100%')
+      .backgroundColor(Color.White)
       .alignItems(VerticalAlign.Center)
       .justifyContent(FlexAlign.SpaceBetween);
     }
@@ -88,6 +89,9 @@ struct ProfileInfoComponent {
     .width('90%')
     .alignItems(HorizontalAlign.Start)
     .justifyContent(FlexAlign.End);
+  }
+
+  onUserData(changedPropertyName: string) {
   }
 }
 

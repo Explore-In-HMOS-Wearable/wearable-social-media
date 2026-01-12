@@ -10,8 +10,7 @@ struct PostDetailPage {
 
   }
   build() {
-     if (this.post)
-     {PostItem({
+     if (this.post) {PostItem({
        postData: this.post
      })}
      }

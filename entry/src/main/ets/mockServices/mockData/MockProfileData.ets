@@ -6,5 +6,5 @@ export const mockProfileData : IProfileData = {
   biography: 'string',
   lastSeen: 'string',
   user: mockUserData,
-  photo: 'string',
+  photo: 'string'
 }

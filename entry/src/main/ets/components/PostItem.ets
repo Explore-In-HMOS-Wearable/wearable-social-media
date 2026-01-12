@@ -3,13 +3,13 @@ import { IPostData } from '../model/Interface/IPostData'
 
 @Component
 struct PostItem {
-  @Prop postData: IPostData
+  @Prop @Watch('onPostData') postData: IPostData
   onLike: () => void = () => {
   }
   onClickComment: () => void = () => {
   }
-  @State isLiked: boolean = false
-  @State iconWidth: string = '12vp';
+  private isLiked: boolean = false
+  private iconWidth: string = '12vp';
 
   openProfile() {
 
@@ -56,6 +56,7 @@ struct PostItem {
       .width('100%')
       .backgroundColor(Color.Black)
       .padding(3)
+
       Image((this.postData.photo))
         .width('80%')
         .aspectRatio(1)
@@ -68,6 +69,10 @@ struct PostItem {
     .backgroundColor(Color.Black)
 
   }
+
+  onPostData(changedPropertyName: string) {
+  }
+
 }
 
 export { PostItem }

@@ -1,5 +1,5 @@
 import { IPostData } from '../../model/Interface/IPostData';
-import { mockUserData, mockUserData_2, mockUserData_3 } from './MockUserData';
+import { mockUserData, mockUserData2, mockUserData3 } from './MockUserData';
 
 const timestamp = new Date().toString();
 
@@ -16,8 +16,8 @@ export const mockPostDataList: Array<IPostData> = [
     likeCount: 10,
     commentCount: 1,
     publishDate: timestamp,
-    user: mockUserData_3,
-    location: 'Izmir',
+    user: mockUserData3,
+    location: 'Izmir'
   },
   {
     id: 2,
@@ -29,8 +29,8 @@ export const mockPostDataList: Array<IPostData> = [
     likeCount: 5,
     commentCount: 1,
     publishDate: timestamp,
-    user: mockUserData_2,
-    location: 'Izmir',
+    user: mockUserData2,
+    location: 'Izmir'
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ export const mockPostDataList: Array<IPostData> = [
     commentCount: 1,
     publishDate: timestamp,
     user: mockUserData,
-    location: 'Izmir',
+    location: 'Izmir'
   }
 
 ]

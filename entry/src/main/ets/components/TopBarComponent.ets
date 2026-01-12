@@ -1,8 +1,6 @@
-import { IProfileResponse } from '../model/Interface/IProfileResponse';
 
 @Component
 struct TopBarComponent {
-  @Prop user: IProfileResponse;
   onClickFunction: () => void = () => {
   }
 

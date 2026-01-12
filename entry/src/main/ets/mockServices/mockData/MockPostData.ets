@@ -16,5 +16,5 @@ export const mockPostData: IPostData = {
   commentCount: 1,
   publishDate: timestamp,
   user: mockUserData,
-  location: 'Uganda',
+  location: 'Uganda'
 }

@@ -1,7 +1,7 @@
 import { IPostData } from '../model/Interface/IPostData'
 
 
-let postList: Array<IPostData> = []
+const postList: Array<IPostData> = []
 
 export abstract class PostService {
 

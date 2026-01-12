@@ -19,12 +19,17 @@ export struct MenuPage {
   build() {
     NavDestination() {
       Column() {
+        Blank()
+          .width('100%')
+          .height('15%')
         List({ space: 7 }) {
           this.ButtonIcon($r('app.media.home'), 'Home', '18vp', 0)
           this.ButtonIcon($r('app.media.story3'), 'Stories', '19vp', 1)
           this.ButtonIcon($r('app.media.hearth'), 'Activity', '15vp', 2)
           this.ButtonIcon($r('app.media.searchicon'), 'Explore', '17vp', 3)
         }
+        .height('100%')
+        .width('100%')
         .scrollBar(BarState.Off)
         .alignListItem(ListItemAlign.Center)
         .alignSelf(ItemAlign.Center)

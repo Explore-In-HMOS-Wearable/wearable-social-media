@@ -4,7 +4,7 @@ import { ProfilePage } from './ProfilePage'
 import { WsNotification } from '../model/WsNotificationData'
 import { emitter } from '@kit.BasicServicesKit'
 import { IProfileResponse } from '../model/Interface/IProfileResponse'
-import { MockProfileResponse_2 } from '../mockServices/mockData/MockProfileResponse'
+import { mockProfileResponse2 } from '../mockServices/mockData/MockProfileResponse'
 import { HomePage } from './HomePage'
 import { TmpClass } from './MenuPage'
 import { edgeWidths } from '@kit.ArkUI'
@@ -15,17 +15,16 @@ export function MainPageBuilder(name: string, param: Object) {
   MainPage()
 }
 
-@Entry
 @Component
 export struct MainPage {
-  @State gridMargin: number = 100
-  @State gridGutter: number = 100
-  @State sm: number = -200
+  private gridMargin: number = 100
+  private gridGutter: number = 100
+  private sm: number = -200
   @State currentIndex: number = 0
   @State notificationCount: number = 0
   private tabsController: TabsController = new TabsController()
-  currentUser: IProfileResponse = MockProfileResponse_2
-  @State newNotification: object = []
+  currentUser: IProfileResponse = mockProfileResponse2
+  private newNotification: object = []
   pageInfos: NavPathStack = new NavPathStack();
   private color1: common2D.Color = {
     alpha: 255,
@@ -39,9 +38,9 @@ export struct MainPage {
     green: 15,
     blue: 135
   };
-  @State DrawingColorFilterFirst: ColorFilter | undefined =
+  @State drawingColorFilterFirst: ColorFilter | undefined =
     drawing.ColorFilter.createBlendModeColorFilter(this.color1, drawing.BlendMode.SRC_IN);
-  @State DrawingColorFilterSecond: ColorFilter | undefined =
+  @State drawingColorFilterSecond: ColorFilter | undefined =
     drawing.ColorFilter.createBlendModeColorFilter(this.color2, drawing.BlendMode.SRC_IN);
 
   @Builder
@@ -55,7 +54,7 @@ export struct MainPage {
         .renderMode(ImageRenderMode.Original)
         .foregroundColor($r('app.color.main_selected'))
         .margin({ bottom: margin })
-        .colorFilter(this.currentIndex === index ? this.DrawingColorFilterFirst : this.DrawingColorFilterSecond)
+        .colorFilter(this.currentIndex === index ? this.drawingColorFilterFirst : this.drawingColorFilterSecond)
     }
     .width('20%')
     .height('100%')
@@ -121,9 +120,9 @@ export struct MainPage {
         .barPosition(BarPosition.End)
         .barBackgroundColor($r('app.color.sections_tab_color_selected'))
         .barMode(BarMode.Fixed)
-        .onChange((index: number) => {
-          this.currentIndex = index
-          if (index === 3) {
+        .onAnimationStart((_index: number, targetIndex: number, _event: TabsAnimationEvent) => {
+          this.currentIndex = targetIndex;
+          if (targetIndex === 3) {
             this.notificationCount = 0
           }
         })
